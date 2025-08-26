@@ -4,7 +4,7 @@ include 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $name = $_POST['name'];
+    $name = $_POST['a'];
     $nacionalidade = $_POST['nacionalidade'];
     $dataNascimento = $_POST['dataNascimento'];
 
