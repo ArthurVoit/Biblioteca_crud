@@ -4,11 +4,11 @@ include 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $name = $_POST['a'];
-    $nacionalidade = $_POST['nacionalidade'];
-    $dataNascimento = $_POST['dataNascimento'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
 
-    $sql = " INSERT INTO autores (name, nacionalidade, dataNascimento) VALUE ('$name','$nacionalidade','$dataNascimento)";
+    $sql = " INSERT INTO leitores (name, email, telefone) VALUE ('$name','$email','$telefone)";
 
     if ($conn->query($sql) === true) {
         echo "Novo registro criado com sucesso.";
@@ -26,21 +26,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Autores</title>
+    <title>Cadastro leitores</title>
 </head>
 
 <body>
 
-    <form method="POST" action="create_autor.php">
+    <form method="POST" action="create_leitores.php">
 
         <label for="name">Nome:</label>
         <input type="text" name="name" required>
 
-        <label for="nacionalidade">Nacionalidade:</label>
-        <input type="text" name="nacionalidade" required>
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
 
-        <label for="dataNascimento">Data do Nascimento:</label>
-        <input type="date" name="dataNascimento" required>
+        <label for="telefone">Telefone:</label>
+        <input type="telephone" name="telefone" required>
 
         <input type="submit" value="Adicionar">
 

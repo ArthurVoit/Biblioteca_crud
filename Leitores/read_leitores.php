@@ -2,7 +2,7 @@
 
 include 'db.php';
 
-$sql = "SELECT * FROM autores";
+$sql = "SELECT * FROM leitores";
 
 $result = $conn->query($sql);
 
