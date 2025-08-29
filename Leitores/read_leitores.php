@@ -12,8 +12,8 @@ if ($result->num_rows > 0) {
         <tr>
             <th> ID </th>
             <th> Nome </th>
-            <th> Nacionalidade </th>
-            <th> Ano de Nascimento </th>
+            <th> Email </th>
+            <th> Telefone </th>
         </tr>
          ";
 
@@ -22,8 +22,8 @@ if ($result->num_rows > 0) {
         echo "<tr>
                 <td> {$row['id']} </td>
                 <td> {$row['name']} </td>
-                <td> {$row['nacionalidade']} </td>
-                <td> {$row['dataNascimento']} </td>
+                <td> {$row['email']} </td>
+                <td> {$row['telefone']} </td>
                 <td> 
                     <a href='update.php?id={$row['id']}'>Editar<a>
                     <a href='delete.php?id={$row['id']}'>Excluir<a>
